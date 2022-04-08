@@ -16,18 +16,18 @@ Post 3030 has to be [mapped](https://docs.docker.com/engine/reference/commandlin
 
 ## Usage
 
-Arguments after the image name (`atomgraph/fuseki`) become arguments to the [Fuseki server (no UI)](https://jena.apache.org/documentation/fuseki2/fuseki-run.html#fuseki-server). As the name explains, this server version _does not include the user interface_.
+Arguments after the image name (`yetanalytics/fuseki`) become arguments to the [Fuseki server (no UI)](https://jena.apache.org/documentation/fuseki2/fuseki-run.html#fuseki-server). As the name explains, this server version _does not include the user interface_.
 
 ### Examples
 
 Empty memory dataset:
 
-    docker run --rm -p 3030:3030 atomgraph/fuseki --mem /ds
+    docker run --rm -p 3030:3030 yetanalytics/fuseki --mem /ds
 
 Dataset from file `data.nt` (which is mounted as part of the current directory):
 
-    docker run --rm -p 3030:3030 -v $(pwd):/usr/share/data atomgraph/fuseki --file=/usr/share/data/data.nt /ds
+    docker run --rm -p 3030:3030 -v $(pwd):/usr/share/data yetanalytics/fuseki --file=/usr/share/data/data.nt /ds
 
 Help (all run options explained):
 
-    docker run --rm atomgraph/fuseki --help
+    docker run --rm yetanalytics/fuseki --help
